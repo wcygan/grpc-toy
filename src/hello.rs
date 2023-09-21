@@ -11,10 +11,10 @@ impl HelloService for HelloServiceImpl {
         &self,
         request: Request<HelloRequest>,
     ) -> Result<Response<HelloReply>, Status> {
-        let greeting = request.into_inner().greeting;
+        let name = request.into_inner().name;
 
         let reply = HelloReply {
-            reply: format!("Hello, {}!", greeting),
+            reply: format!("Hello, {}!", name),
         };
 
         Ok(Response::new(reply))

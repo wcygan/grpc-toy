@@ -15,7 +15,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let (_, health_service) = tonic_health::server::health_reporter();
 
     // Start the server
-    println!("twote-api running on {}", addr);
+    println!("running on {}", addr);
     Server::builder()
         .add_service(health_service)
         .add_service(hello_service)
