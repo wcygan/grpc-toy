@@ -1,3 +1,5 @@
+include!(concat!(env!("OUT_DIR"), "/hello.rs"));
+
 use crate::hello::hello_service_server::HelloServiceServer;
 use crate::hello::HelloServiceImpl;
 use tonic::transport::Server;

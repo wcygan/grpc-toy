@@ -3,6 +3,10 @@ name = "grpc-toy"
 version = "0.1.0"
 edition = "2021"
 
+[[test]]
+name = "grpc-toy"
+path = "tests/integration.rs"
+
 [dependencies]
 anyhow = "1.0.69"
 tonic = "0.10.0"
