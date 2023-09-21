@@ -7,10 +7,13 @@ pub struct HelloServiceImpl;
 
 #[tonic::async_trait]
 impl HelloService for HelloServiceImpl {
+    #[tracing::instrument(name = "say_hello", skip(self))]
     async fn say_hello(
         &self,
         request: Request<HelloRequest>,
     ) -> Result<Response<HelloReply>, Status> {
+        tracing::info!("Processing say_hello request");
+
         let name = request.into_inner().name;
 
         let reply = HelloReply {
