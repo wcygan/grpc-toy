@@ -10,7 +10,7 @@ service HelloService {
 
 // Message that contains the string to send
 message HelloRequest {
-  string greeting = 1;
+  string name = 1;
 }
 
 // Message that contains the reply string
