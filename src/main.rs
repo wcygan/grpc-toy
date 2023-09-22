@@ -7,7 +7,7 @@ use tracing_subscriber::FmtSubscriber;
 
 mod hello;
 
-const ADDR: &str = "0.0.0.0:8080";
+const ADDR: &str = "0.0.0.0:9090";
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
